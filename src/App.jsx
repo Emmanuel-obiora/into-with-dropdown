@@ -1,24 +1,22 @@
 import React from 'react';
-import 'styles.css';
+import './styles.css';
+import Home from './Components/Home';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import NoPage from './Components/NoPage';
 
 const App = () => {
   return (
-    <div>
-        Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-    </div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/careers' element={<Home />} />
+          <Route path='/about' element={<Home />} />
+          <Route path='/login' element={<Home />} />
+          <Route path='/register' element={<Home />} />
+          <Route path="*" exact  element={<NoPage/>} />
+        </Routes>
+      </Router>
   )
 }
 
