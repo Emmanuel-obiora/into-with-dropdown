@@ -105,7 +105,7 @@ const Nav = () => {
         <img src={OpenNavM} onClick={mobileNavToggle} alt="" />
     </header>
     <Modal close={closeOpenNav}/>
-    <Modal2 data={mobileNavToggle} />
+    <Modal2 data={mobileNavToggle} deactivate={closeOpenNav} />
     </>
   )
 }

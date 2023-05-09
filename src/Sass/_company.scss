@@ -8,13 +8,17 @@
     border: 1px solid $Almost-White;
     border-radius: 10px;
     width: 7rem;
-    font-size: 14px;
+    font-size: 15px;
     box-shadow: 0 5px 10px 10px $gray;
     // z-index: 30;
 
     @media(max-width: 37.5rem){
         position: relative;
         top: 0;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0 1rem;
     }
 
     & > ul{

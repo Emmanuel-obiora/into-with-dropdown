@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Modal2 = ({data}) => {
+const Modal2 = ({data, deactivate}) => {
   return (
-    <div id='Closing' className='closin' onClick={data}></div>
+    <div id='Closing' className='closin' onClick={()=>{data(); deactivate();}}></div>
   )
 }
 

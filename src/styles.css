@@ -18,7 +18,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: auto;
-  padding: 1rem 2rem;
+  padding: 1rem;
   gap: 2rem;
   justify-content: space-between;
 }
@@ -131,7 +131,12 @@ body {
 @media (max-width: 37.5rem) {
   .color2 {
     display: flex;
-    padding: 0.6rem 5rem;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    padding: 0.5rem 0;
+    margin-top: 2rem;
   }
 }
 
@@ -140,12 +145,8 @@ body {
   transition: all 0.3s ease-in;
 }
 
-.active-mobile-close {
-  display: block;
-}
-
 .active-mobile-open {
-  display: block;
+  display: flex;
 }
 
 .feature {
@@ -166,6 +167,10 @@ body {
   .feature {
     position: relative;
     top: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 1rem;
   }
 }
 .feature > ul {
@@ -189,13 +194,17 @@ body {
   border: 1px solid hsl(0, 0%, 98%);
   border-radius: 10px;
   width: 7rem;
-  font-size: 14px;
+  font-size: 15px;
   box-shadow: 0 5px 10px 10px rgb(231, 227, 227);
 }
 @media (max-width: 37.5rem) {
   .company {
     position: relative;
     top: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 1rem;
   }
 }
 .company > ul {
@@ -317,7 +326,6 @@ body {
 @media (max-width: 37.5rem) {
   .home-right {
     background-image: url("/src/images/image-hero-mobile.png");
-    background-size: cover;
     width: 100vw;
     height: 42vh;
   }
@@ -353,7 +361,7 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .modall-active {
