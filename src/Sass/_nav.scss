@@ -1,0 +1,48 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: auto;
+    padding: 1rem;
+    
+    &-left{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        & > ul{
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+    }
+
+    &-right{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+}
+
+.change{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+}
+
+.nav-color{
+    color: $Medium-Gray;
+}
+
+.color2{
+    border: 2px solid $Medium-Gray;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+// Fliping the state of each nav drop-down element
+.active > img{
+    transform: rotate(180deg);
+    transition: all .3s ease-in;
+}

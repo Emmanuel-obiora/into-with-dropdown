@@ -1,0 +1,25 @@
+.feature{
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    border: 1px solid $Almost-White;
+    padding: 1rem;
+    background: $white;
+    border-radius: 10px;
+    color: $Medium-Gray;
+    font-size: 14px;
+    width: 8rem;
+
+    & > ul{
+        display: grid;
+        row-gap: .6rem;
+
+        & >li{
+            cursor: pointer;
+                &>img{
+                margin-right: .2rem;
+            }
+        }
+
+    }
+}

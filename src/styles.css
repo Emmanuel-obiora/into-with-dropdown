@@ -3,12 +3,103 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
   font-family: "Epilogue", sans-serif;
   font-size: 16px;
   display: grid;
+  background: hsl(0, 0%, 98%);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: auto;
+  padding: 1rem;
+}
+.nav-left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav-left > ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.change {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.nav-color {
+  color: hsl(0, 0%, 41%);
+}
+
+.color2 {
+  border: 2px solid hsl(0, 0%, 41%);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.active > img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in;
+}
+
+.feature {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  border: 1px solid hsl(0, 0%, 98%);
+  padding: 1rem;
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  color: hsl(0, 0%, 41%);
+  font-size: 14px;
+  width: 8rem;
+}
+.feature > ul {
+  display: grid;
+  row-gap: 0.6rem;
+}
+.feature > ul > li {
+  cursor: pointer;
+}
+.feature > ul > li > img {
+  margin-right: 0.2rem;
+}
+
+.company {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  padding: 1rem;
+  color: hsl(0, 0%, 41%);
+  background: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 98%);
+  border-radius: 10px;
+  width: 7rem;
+  font-size: 14px;
+}
+.company > ul {
+  display: grid;
+  row-gap: 0.6rem;
+}
+.company > ul > li {
+  cursor: pointer;
 }
 
 .attribution {

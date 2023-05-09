@@ -1,0 +1,21 @@
+.company{
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    padding: 1rem;
+    color: $Medium-Gray;
+    background: $white;
+    border: 1px solid $Almost-White;
+    border-radius: 10px;
+    width: 7rem;
+    font-size: 14px;
+
+    & > ul{
+        display: grid;
+        row-gap: .6rem;
+
+        &>li{
+            cursor: pointer;
+        }
+    }
+}
