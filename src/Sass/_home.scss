@@ -5,21 +5,45 @@
     margin: 0 auto;
     column-gap: 5%;
 
+    @media(max-width: 37.5rem){
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 0;
+        margin: 0;
+    }
+
     &-left{
         display: grid;
         row-gap: 4.5rem;
         margin: 4rem 0 0 4.5rem;
         padding: 0 2rem;
 
+        @media(max-width: 37.5rem){
+            margin: 0;
+            padding: .8rem;
+            row-gap: 3rem;
+        }
+
         &-top{
             display: grid;
             row-gap: 2rem;
-            // margin-top: 4rem;
+            
+            @media(max-width: 37.5rem){
+                display: grid;
+                margin: 0 auto;
+                text-align: center;
+                row-gap: 1rem;
+            }
 
             & > h1{
                 font-size: 4.9rem;
                 line-height: .9;  
                 color: $Almost-Black;  
+
+                @media(max-width: 37.5rem){
+                    font-size: 2.4rem;
+                }
             }
 
             & > p{
@@ -28,18 +52,29 @@
                 margin-right: 8rem;
                 line-height: 1.5;
                 font-weight: 500;
+
+                @media(max-width: 37.5rem){
+                    margin-right: 0;
+                }
             }
 
             & > button{
                 width: fit-content;
                 padding: .6rem 1rem;
                 border: 1px solid $Medium-Gray;
-                background: $white;
+                background: $Almost-Black;
                 border-radius: 10px;
                 font-size: 17px;
-                color: $Medium-Gray;
+                color: $Almost-White;
                 font-weight: 700;
                 cursor: pointer;
+                transition: all ease-in-out .4s;
+
+                @media(max-width: 37.5rem){
+                    display: flex;
+                    align-self: center;
+                    justify-self: center;
+                }
 
                 &:hover{
                     color: $Almost-Black;
@@ -56,6 +91,11 @@
             &>img{
                 max-width: 20%;
             }
+
+            @media(max-width: 37.5rem){
+                gap: 1.2rem;
+                justify-content: center;
+            }
         }
     }
 
@@ -64,11 +104,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size:contain;
-        // width: 100%;
-        // height: 100%;
 
         @media(max-width: 37.5rem){
             background-image: url('/src/images/image-hero-mobile.png');
+            background-size: cover;
+            width:100vw;
+            height: 42vh;
         }
     }
 }

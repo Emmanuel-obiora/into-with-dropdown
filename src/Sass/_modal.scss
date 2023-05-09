@@ -12,3 +12,19 @@
 .modal-active{
     display: block;
 }
+
+// styling for mobile nav modal box
+.closin{
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+// activating modal2 box
+.modall-active{
+    display: block;
+}

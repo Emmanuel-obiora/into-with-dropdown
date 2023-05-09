@@ -10,6 +10,12 @@
     font-size: 14px;
     width: 8rem;
     box-shadow: 0 5px 10px 10px $gray;
+    z-index: 30;
+
+    @media(max-width: 37.5rem){
+        position: relative;
+        top: 0;
+    }
 
     & > ul{
         display: grid;
