@@ -3,11 +3,12 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    z-index: 10;
     
     &-left{
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
         align-items: center;
 
         & > ul{
@@ -29,10 +30,18 @@
     align-items: center;
     gap: .5rem;
     position: relative;
+
+    & > img{
+        cursor: pointer;
+    }
 }
 
 .nav-color{
     color: $Medium-Gray;
+
+    &:hover{
+        color: $Almost-Black;
+    }
 }
 
 .color2{

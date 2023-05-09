@@ -9,6 +9,7 @@
     color: $Medium-Gray;
     font-size: 14px;
     width: 8rem;
+    box-shadow: 0 5px 10px 10px $gray;
 
     & > ul{
         display: grid;

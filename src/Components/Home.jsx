@@ -9,21 +9,23 @@ import MainLayout from './Layout/MainLayout';
 const Home = () => {
   return (
     <MainLayout>
-        <div className="main-left">
-            <div className="main-left-top">
-                <h1>Make remote work</h1>
-                <p>Get your team in sync, no matter your location. Streamline processes, 
-                    create team rituals, and watch productivity soar.</p>
-                <button type='button'>Learn more</button>
+        <div className='home'>
+            <div className="home-left">
+                <div className="home-left-top">
+                    <h1>Make remote work</h1>
+                    <p>Get your team in sync, no matter your location. Streamline processes, 
+                        create team rituals, and watch productivity soar.</p>
+                    <button type='button'>Learn more</button>
+                </div>
+                <span className="home-left-buttom">
+                    <img src={Databiz} alt="Databiz" />
+                    <img src={Audiophile} alt="Audiophile" />
+                    <img src={Meet} alt="Meet" />
+                    <img src={Maker} alt="Maker" />
+                </span>
             </div>
-            <span>
-                <img src={Databiz} alt="Databiz" />
-                <img src={Audiophile} alt="Audiophile" />
-                <img src={Meet} alt="Meet" />
-                <img src={Maker} alt="Maker" />
-            </span>
+            <div className="home-right"></div>
         </div>
-        <div className="main-right"></div>
     </MainLayout>
   )
 }

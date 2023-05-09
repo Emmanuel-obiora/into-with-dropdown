@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Logo from '../images/logo.svg';
 import DropDown from '../images/icon-arrow-down.svg';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Company from './Company';
 import Features from './Features';
+import Modal from './Modal';
 
 const Nav = () => {
     const [companyDrop, setCompanyDrop] = useState(false);
@@ -14,8 +15,10 @@ const Nav = () => {
 
         if(companyDrop){
             document.getElementById('CDown').parentNode.classList.remove('active');
+            document.getElementById('Modal').classList.remove('modal-active');
         } else{
             document.getElementById('CDown').parentNode.classList.add('active');
+            document.getElementById('Modal').classList.add('modal-active');
         }
     };
 
@@ -24,78 +27,60 @@ const Nav = () => {
 
         if(featureDrop){
             document.getElementById('FDown').parentNode.classList.remove('active');
+            document.getElementById('Modal').classList.remove('modal-active');
         } else{
             document.getElementById('FDown').parentNode.classList.add('active');
+            document.getElementById('Modal').classList.add('modal-active');
         }
     };
 
-    const location = useLocation();
-    useEffect(() => {
-        // console.log('location', location.pathname);
+    const closeOpenNav = () => {
+        setCompanyDrop(false);
+        setFeatureDrop(false);
+        document.getElementById('FDown').parentNode.classList.remove('active');
+        document.getElementById('CDown').parentNode.classList.remove('active');
+        document.getElementById('Modal').classList.remove('modal-active');
+    };
 
-        if(location.pathname.includes('/home')){
-        //   const head = document.getElementById('Head');
-        //   const taken = document.getElementById('depoReceipt');
-        //   const takes = document.getElementById('manageChq');
-        //   const retrieved = document.getElementById('retrievedData');
-      
-        //   takes.classList.add('active-bar');
-        //   taken.classList.remove('activeness');
-        //   head.innerHTML="Manager's cheque";
-        //   retrieved.classList.remove('active_re');
-        }
+    const closeFOpenNav = () => {
+        setFeatureDrop(false);
+        document.getElementById('FDown').parentNode.classList.remove('active');
+    };
 
-         if(location.pathname.includes('/careers')){
-        //   const head = document.getElementById('Head');
-        //   const taken = document.getElementById('depoReceipt');
-        //   const takes = document.getElementById('manageChq');
-        //   const retrieved = document.getElementById('retrievedData');
-      
-        //   takes.classList.remove('active-bar');
-        //   taken.classList.add('activeness');
-        //   head.innerHTML="Deposit Receipt";
-        //   retrieved.classList.remove('active_re');
-        }
-
-        else if(location.pathname.includes('/login')){
-        //   const head = document.getElementById('Head');
-        //   const taken = document.getElementById('depoReceipt');
-        //   const takes = document.getElementById('manageChq');
-        //   const retrieved = document.getElementById('retrievedData');
-      
-        //   takes.classList.remove('active-bar');
-        //   taken.classList.remove('activeness');
-        //   head.innerHTML="Deposit History";
-        //   retrieved.classList.add('active_re');
-        }
-    }, [location.pathname]);
+    const closeCOpenNav = () => {
+        setCompanyDrop(false);
+        document.getElementById('CDown').parentNode.classList.remove('active');
+    };
     
   return (
+    <>
     <nav className='nav'>
         <div className="nav-left">
             <Link to='/home'>
-                <img src={Logo} alt="Logo" />
+                <img src={Logo} alt="Logo" onClick={closeOpenNav} />
             </Link>
             <ul>
-                <li className='change'>
-                    <Link to='/features' className='nav-color' onClick={flipFDrop}>Features</Link>
+                <li className='change' onClick={()=>{flipFDrop(); closeCOpenNav();}}>
+                    <Link to='/features' className='nav-color' >Features</Link>
                     <img src={DropDown} alt="Arrow down" id='FDown' />
                     <Features data={featureDrop}/>
                 </li>
-                <li className='change'>
-                    <Link to='/company' className='nav-color' onClick={flipDrop} >Company</Link>
+                <li className='change' onClick={()=>{flipDrop(); closeFOpenNav();}}>
+                    <Link to='/company' className='nav-color' >Company</Link>
                     <img src={DropDown} alt="Arrow down" id='CDown' />
                     <Company data={companyDrop} />
                 </li>
-                <li><Link to="/careers" className='nav-color'>Careers</Link></li>
-                <li><Link to="/about" className='nav-color'>About</Link></li>
+                <li><Link to="/careers" className='nav-color' onClick={closeOpenNav}>Careers</Link></li>
+                <li><Link to="/about" className='nav-color' onClick={closeOpenNav}>About</Link></li>
             </ul>
         </div>
         <div className="nav-right">
-            <Link to="/login" className='nav-color'>Login</Link>
-            <Link to="/register" className='nav-color color2'>Register</Link>
+            <Link to="/login" className='nav-color' onClick={closeOpenNav}>Login</Link>
+            <Link to="/register" className='nav-color color2' onClick={closeOpenNav}>Register</Link>
         </div>
     </nav>
+    <Modal close={closeOpenNav}/>
+    </>
   )
 }
 
