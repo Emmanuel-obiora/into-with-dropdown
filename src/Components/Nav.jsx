@@ -72,7 +72,7 @@ const Nav = () => {
   return (
     <>
     <header className='header'>
-        <Link to='/home'>
+        <Link to='/into-with-dropdown/home'>
             <img src={Logo} alt="Logo" onClick={closeOpenNav} />
         </Link>
         <nav className='nav' id='Navigation'>
@@ -81,25 +81,25 @@ const Nav = () => {
                 <ul>
                     <li className='change'>
                         <div className="change-top" onClick={()=>{flipFDrop(); closeCOpenNav();}}>
-                            <Link to='/features' className='nav-color' >Features</Link>
+                            <Link to='/into-with-dropdown/features' className='nav-color' >Features</Link>
                             <img src={DropDown} alt="Arrow down" id='FDown' />
                         </div>
                         <Features data={featureDrop}/>
                     </li>
                     <li className='change'>
                         <div className="change-top" onClick={()=>{flipDrop(); closeFOpenNav();}}>
-                            <Link to='/company' className='nav-color' >Company</Link>
+                            <Link to='/into-with-dropdown/company' className='nav-color' >Company</Link>
                             <img src={DropDown} alt="Arrow down" id='CDown' />
                         </div>
                         <Company data={companyDrop} />
                     </li>
-                    <li><Link to="/careers" className='nav-color' onClick={closeOpenNav}>Careers</Link></li>
-                    <li><Link to="/about" className='nav-color' onClick={closeOpenNav}>About</Link></li>
+                    <li><Link to="/into-with-dropdown/careers" className='nav-color' onClick={closeOpenNav}>Careers</Link></li>
+                    <li><Link to="/into-with-dropdown/about" className='nav-color' onClick={closeOpenNav}>About</Link></li>
                 </ul>
             </div>
             <div className="nav-right">
-                <Link to="/login" className='nav-color' onClick={closeOpenNav}>Login</Link>
-                <Link to="/register" className='nav-color color2' onClick={closeOpenNav}>Register</Link>
+                <Link to="/into-with-dropdown/login" className='nav-color' onClick={closeOpenNav}>Login</Link>
+                <Link to="/into-with-dropdown/register" className='nav-color color2' onClick={closeOpenNav}>Register</Link>
             </div>
         </nav>
         <img src={OpenNavM} onClick={mobileNavToggle} alt="" />
