@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/into-with-dropdown/static/css/main.457b8434.css",
-    "main.js": "/into-with-dropdown/static/js/main.63924455.js",
+    "main.js": "/into-with-dropdown/static/js/main.66053f57.js",
     "static/media/image-hero-desktop.png": "/into-with-dropdown/static/media/image-hero-desktop.50cc22fddeb0c072b414.png",
     "static/media/image-hero-mobile.png": "/into-with-dropdown/static/media/image-hero-mobile.adefc8b1bbed2ca80470.png",
     "static/media/client-databiz.svg": "/into-with-dropdown/static/media/client-databiz.d1e7955f847e089183caf61eb54feb51.svg",
@@ -18,10 +18,10 @@
     "static/media/icon-menu.svg": "/into-with-dropdown/static/media/icon-menu.863803c904916606b7a1998b3c5736aa.svg",
     "static/media/icon-arrow-down.svg": "/into-with-dropdown/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
     "main.457b8434.css.map": "/into-with-dropdown/static/css/main.457b8434.css.map",
-    "main.63924455.js.map": "/into-with-dropdown/static/js/main.63924455.js.map"
+    "main.66053f57.js.map": "/into-with-dropdown/static/js/main.66053f57.js.map"
   },
   "entrypoints": [
     "static/css/main.457b8434.css",
-    "static/js/main.63924455.js"
+    "static/js/main.66053f57.js"
   ]
 }
