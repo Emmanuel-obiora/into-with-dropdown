@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import Home from './Components/Home';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { HashRouter as Router, Route, Routes} from 'react-router-dom';
 import NoPage from './Components/NoPage';
 
 const App = () => {
