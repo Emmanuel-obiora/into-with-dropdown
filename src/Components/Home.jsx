@@ -11,12 +11,12 @@ const Home = () => {
     <MainLayout>
         <div className='home'>
             <div className="home-left">
-                <div className="home-left-top">
+                <section className="home-left-top">
                     <h1>Make remote work</h1>
                     <p>Get your team in sync, no matter your location. Streamline processes, 
                         create team rituals, and watch productivity soar.</p>
                     <button type='button'>Learn more</button>
-                </div>
+                </section>
                 <span className="home-left-buttom">
                     <img src={Databiz} alt="Databiz" />
                     <img src={Audiophile} alt="Audiophile" />

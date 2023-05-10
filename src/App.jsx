@@ -8,6 +8,7 @@ const App = () => {
   return (
       <Router>
         <Routes>
+          <Route path='/' element={<Home />} />
           <Route path='/into-with-dropdown' element={<Home />} />
           <Route path='/into-with-dropdown/home' element={<Home />} />
           <Route path='/into-with-dropdown/features' element={<Home />} />
