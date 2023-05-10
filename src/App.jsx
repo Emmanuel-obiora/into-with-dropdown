@@ -9,6 +9,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/into-with-dropdown' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/features' element={<Home />} />
           <Route path='/company' element={<Home />} />
